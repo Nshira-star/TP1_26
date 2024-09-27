@@ -1,4 +1,4 @@
-# TP langage C no 1 - 2024
+# TP langage C no 1
 
 ## Objectifs:
 
