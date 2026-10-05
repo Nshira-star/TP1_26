@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
+    <ClCompile Include="Exo2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
