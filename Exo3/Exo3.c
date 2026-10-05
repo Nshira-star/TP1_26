@@ -11,11 +11,22 @@
 #include <locale.h>
 #include <limits.h>
 #include <time.h>
-
+#ifdef _WIN32
+#include <conio.h>
+#include <Windows.h>
+#endif
 
 int main() {
 
-	setlocale(LC_ALL, "fr-FR");
+	// Support des caratères accentués
+	const char* locale_name;
+	locale_name = setlocale(LC_ALL, "");
+
+#ifdef _WIN32
+	SetConsoleOutputCP(CP_UTF8);
+	SetConsoleCP(CP_UTF8);
+	locale_name = setlocale(LC_ALL, "fr-FR");
+#endif
 
 	int trouve = false;
 	int nb_essais = 0;

@@ -8,10 +8,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <locale.h>
 #include <limits.h>
-
-
+#ifdef _WIN32
+#include <conio.h>
+#include <Windows.h>
+#endif
+#include <assert.h>
+#include <locale.h>
 int main() {
 
 	// LE SUJET COMPLET est disponible sur le dépôt GitHub et se nomme TP1.md
@@ -22,8 +25,15 @@ int main() {
 	// La valeur de n est fixée dans le programme (prendre 100 pour commencer).
 	// Afficher la valeur de n et la somme correspondante.
 
-	setlocale(LC_ALL, "fr-FR");
+		// Support des caratères accentués
+	const char* locale_name;
+	locale_name = setlocale(LC_ALL, "");
 
+#ifdef _WIN32
+	SetConsoleOutputCP(CP_UTF8);
+	SetConsoleCP(CP_UTF8);
+	locale_name = setlocale(LC_ALL, "fr-FR");
+#endif
 	unsigned short int somme = 0;
 
 	unsigned short int n = 100;

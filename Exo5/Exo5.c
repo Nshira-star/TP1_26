@@ -10,7 +10,10 @@
 #include <stdbool.h>
 #include <locale.h>
 #include <limits.h>
-
+#ifdef _WIN32
+#include <conio.h>
+#include <Windows.h>
+#endif
 
 // Ecrire un programme qui calcule le plus petit multiple commun – ppcm - de trois nombres entiers naturels non nuls.
 // Le ppcm est la plus petite valeur entière qui peut être divisée par chacun de ces nombres.
@@ -20,6 +23,15 @@
 
 	int main(){
 		setlocale(LC_ALL, "fr-FR");
+		// Support des caratères accentués
+		const char* locale_name;
+		locale_name = setlocale(LC_ALL, "");
+
+#ifdef _WIN32
+		SetConsoleOutputCP(CP_UTF8);
+		SetConsoleCP(CP_UTF8);
+		locale_name = setlocale(LC_ALL, "fr-FR");
+#endif
 
 		// Soit 3 valeurs entières non nulles dont on souhaite calculer le ppcm
 		unsigned int valA ;

@@ -11,7 +11,10 @@
 #include <locale.h>
 #include <limits.h>
 #include <math.h>
-
+#ifdef _WIN32
+#include <conio.h>
+#include <Windows.h>
+#endif
 
 // Ecrire un programme qui décompose une valeur de type unsigned int entrée au clavier 
 // en une suite de chiffres séparés par des tirets.
@@ -37,6 +40,15 @@ Entrez une valeur : 0
 
 
 int main() {
+	// Support des caratères accentués
+	const char* locale_name;
+	locale_name = setlocale(LC_ALL, "");
+
+#ifdef _WIN32
+	SetConsoleOutputCP(CP_UTF8);
+	SetConsoleCP(CP_UTF8);
+	locale_name = setlocale(LC_ALL, "fr-FR");
+#endif
 
 	unsigned int valeur;
 	

@@ -10,12 +10,25 @@
 #include <stdbool.h>
 #include <locale.h>
 #include <limits.h>
-
+#ifdef _WIN32
+#include <conio.h>
+#include <Windows.h>
+#endif
 
 // Ecrire un programme nommé Exo2, qui permet à l'utilisateur d'entrer les trois dimensions 
 // d'un bagage et vérifie qu'il est éligible à l'embarquement dans la cabine d'un avion 
 // puisque sa taille n'excède pas 55 cm x 35 cm x 25 cm.
 int main() {
+	// Support des caratères accentués
+	const char* locale_name;
+	locale_name = setlocale(LC_ALL, "");
+
+#ifdef _WIN32
+	SetConsoleOutputCP(CP_UTF8);
+	SetConsoleCP(CP_UTF8);
+	locale_name = setlocale(LC_ALL, "fr-FR");
+#endif
+
 
 	float hauteur, largeur, longueur, tmp;
 	
