@@ -16,7 +16,8 @@ Le TP se présente sous la forme d'un fichier solution .sln qui pointe vers les 
 
 C'est le builder MSBuild qui est utilisé pour compiler les fichiers sources .c en fichiers objets .o puis en exécutables .exe.
 
-Assurez-vous que la solution a été correctement chargée dans Visual Studion. Si le fichier .sln apparait dans l'explorateur de fichiers, 
+Assurez-vous que la solution a été correctement chargée dans Visual Studio. 
+Si le fichier .sln apparait dans l'explorateur de fichiers, 
 double-cliquez dessus pour l'ouvrir dans Visual Studio.
 L'exercice en cours de réalisation doit être défini comme projet de démarrage afin de pouvoir être compilé et exécuté.
 
@@ -26,7 +27,7 @@ Vérifiez systématiquement que le dépôt cloné depuis GitHub a bien été mis
 
 Chaque exercice est complété en respectant scrupuleusement le sujet fourni.
 Le code doit être correctement commenté.
-Les noms de variables et de fonctions doivent respecter les conventions de nommage et être choisis de manière pertinante.
+Les noms de variables et de fonctions doivent respecter les conventions de nommage et être choisis de manière pertinente.
 Le code doit respecter les principes de la programmation structurée en évitant les instructions de saut (goto - break - return ) dès que cela est possible sans nuire aux performances.
 Enfin, le code doit être compilable sans erreurs ou warnings, ne pas comporter de bogues, avoir été testé et débogué au besoin.
 
@@ -40,11 +41,18 @@ collapse: open
 
 La boucle FOR est utilisée lorsqu'on connaît le nombre d'itérations à effectuer.  
  
-D'autres boucles comme le WHILE expriment de façon plus naturelle qu'un évènement est attendu et va provoquer la sortie de boucle et donc mettre fin aux répétitions.  
-Le langage C permet d'écrire toutes sortes de choses originales mais pas forcément très structurées donc sources de bogues et difficiles à maintenir.  
-Dans le cadre de ces TPs, on utilise le C pour coder des algorithmes de manière structurée.  
-On s'interdit donc d'utiliser des instructions comme le GOTO qui permet des sauts difficiles à modéliser en programmation structurée.  
-Pour simplifier le propos, les trois types de structures suivantes (pseudo-langage) : 
+D'autres boucles comme le WHILE expriment de façon plus naturelle qu'un évènement 
+est attendu et va provoquer la sortie de boucle et donc mettre fin aux répétitions.  
+Le langage C permet d'écrire toutes sortes de choses 
+originales mais pas forcément très structurées donc 
+sources de bogues et difficiles à maintenir.  
+Dans le cadre de ces TPs, on utilise le C pour coder
+des algorithmes de manière structurée.  
+On s'interdit donc d'utiliser des instructions 
+comme le GOTO qui permet des sauts difficiles à 
+modéliser en programmation structurée.  
+Pour simplifier le propos, les trois types de
+structures suivantes (pseudo-langage) : 
  
  - POUR i ALLANT DE debut A LA fin  FAIRE instructions FAIT
  - TANT QUE condition est vraie, FAIRE instructions FAIT.  
@@ -56,24 +64,36 @@ Pour simplifier le propos, les trois types de structures suivantes (pseudo-langa
  - while (condition) { instructions ; }  
  - do { instructions ; } while ( !condition );
  
- Dans la structure do .. while , les instructions seront exécutées au moins une fois.  
+ Dans la structure do .. while , les instructions seront exécutées 
+ au moins une fois.  
  REMARQUE: Penser à donner une valeur initiale aux variables !!
 
 ```
 
 * **Somme des n premiers entiers** **positifs** :  
-Ecrire un programme qui calcule la somme des n premiers entiers positifs, avec n > 1, en utilisant les trois types de boucles. La valeur de _n_ (prendre 100 pour commencer) est fixée dans le programme. Afficher la valeur de n et la somme correspondante.
+Ecrire un programme qui calcule la somme des n 
+premiers entiers positifs, avec n > 1, en utilisant 
+les trois types de boucles. La valeur de _n_ (prendre 100 pour commencer) 
+est fixée dans le programme. Afficher la valeur de n et la somme correspondante.
 
 * **Trouver la valeur maximum de n sans dépassement de capacité**
 
-La somme est représentée par une variable de type **unsigned short int,** quelle est la valeur maximum de **n** pour que la variable représentant la somme ait une valeur correcte?
+La somme est représentée par une variable de 
+type **unsigned short int,** quelle est la valeur 
+maximum de **n** pour que la variable représentant 
+la somme ait une valeur correcte?
 
-Concevoir un test qui permettra de sortir de la boucle **while** de manière anticipée en cas de risque de dépassement de capacité.  
+Concevoir un test qui permettra de sortir de la 
+boucle **while** de manière anticipée en cas de risque de dépassement de capacité.  
 Aide : si _A + valeur < =  B_ alors _B – A > = valeur_.
-En calculant _B-A_ on ne risque pas de faire un dépassement, contrairement à celui qui peut apparaître en calculant _A + valeur_.
+En calculant _B-A_ on ne risque pas de faire un 
+dépassement, contrairement à celui qui peut apparaître en calculant _A + valeur_.
 
 * **Demander la valeur de n à l’utilisateur**  
-Modifier le programme, en ce qui concerne la boucle **for**, pour que la valeur de **n** soit demandée à l'utilisateur avec la fonction **scanf_s("%hu",&n)** et tester la boucle au-delà des valeurs permises pour **n**, que vaut la somme ?  
+Modifier le programme, en ce qui concerne la boucle 
+**for**, pour que la valeur de **n** soit demandée 
+à l'utilisateur avec la fonction **scanf_s("%hu",&n)** 
+et tester la boucle au-delà des valeurs permises pour **n**, que vaut la somme ?  
 
 **Remarques:**
 
