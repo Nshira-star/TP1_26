@@ -114,27 +114,37 @@ d'effectuer un calcul correct de la somme des **n** premiers entiers.
 
 ## Exercice 2
 
-Le problème suivant fait essentiellement appel à une suite de tests organisés de manière à ce que l'on puisse conclure : 
+Le problème suivant fait essentiellement appel à une 
+suite de tests organisés de manière à ce que l'on puisse conclure : 
 Le paquet a ou n'a pas une taille réglementaire.
 
-Cela est relativement compliqué à déterminer quand on fait la différence entre hauteur, largeur et profondeur.
-Cependant, notre gabarit ne fera pas la différence et il est souhaitable d'imaginer une astuce qui va faciliter la tâche : commencez par ordonner les trois valeurs..  
+Cela est relativement compliqué à déterminer quand on 
+fait la différence entre hauteur, largeur et profondeur.
+Cependant, notre gabarit ne fera pas la différence et 
+il est souhaitable d'imaginer une astuce qui va faciliter 
+la tâche : commencez par ordonner les trois valeurs..  
 
-**Objectif** : Apprendre à permuter les valeurs de deux variables en utilisant une variable temporaire et écrire des conditions de test de manière structurée. 
+**Objectif** : Apprendre à permuter les valeurs de deux variables 
+en utilisant une variable temporaire et écrire des conditions de test de manière structurée. 
 
 	SI .. ALORS .. SINON  
 
 **Conseil** : Pour éviter les erreurs,
 - Utilisez toujours les accolades.
-- Indentez le code pour écrire des if (   ) {  ..  } else {  .. } , surtout lors de l'imbrication de ces structures.
+- Indentez le code pour écrire des 
+- if (   ) {  ..  } else {  .. } , surtout lors de l'imbrication de ces structures.
 
 
 
-Le code doit permettre à l'utilisateur d'entrer les trois dimensions d'un bagage et vérifier qu'il est éligible à l'embarquement dans la cabine d'un avion puisque sa taille n'excède pas 55 cm x 35 cm x 25 cm.
+Le code doit permettre à l'utilisateur 
+d'entrer les trois dimensions d'un bagage et vérifier q
+u'il est éligible à l'embarquement dans la cabine 
+d'un avion puisque sa taille n'excède pas 55 cm x 35 cm x 25 cm.
 
 * Les dimensions sont des nombres à virgule.
 
-* Le programme pose des questions jusqu'à ce qu'il ait obtenu trois valeurs comprises entre 1 et 150 cm
+* Le programme pose des questions 
+* jusqu'à ce qu'il ait obtenu trois valeurs comprises entre 1 et 150 cm
 
 * Le programme affiche un résultat sous la forme : VALIDE / NON VALIDE
 

@@ -78,7 +78,7 @@ printf("La valeur maximum de n sans dépassement de capacité : %d (Somme = %hu)\n
 do {
 	printf("Entrez la valeur de n (entre 1 et 361) : ");
 	scanf_s("%hu", &n);
-} while (n < 1 || n > 361); // On vérifie n AVANT de calculer !
+} while (n < 1 || n > 361); // On vérifie n AVANT de calculer 
 
 
 somme = 0;

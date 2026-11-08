@@ -31,8 +31,35 @@ int main() {
 
 
 	float hauteur, largeur, longueur, tmp;
-	
+	int reponse;
+do {
+	printf("\nVERIFICATION DE BAGAGE CABINE\n");
+	do { 
+		printf("Entrez la hauteur du bagage (en cm) : "); 
+		scanf_s("%f", &hauteur);
+		} while (hauteur < 1 || hauteur > 150);
 
+	do {
+		printf("Entrez la largeur du bagage (en cm) : ");
+		scanf_s("%f", &largeur);
+	} while (largeur < 1 || largeur > 150);
+
+	do {
+		printf("Entrez la longueur du bagage (en cm) : ");
+		scanf_s("%f", &longueur);
+	} while (longueur < 1 || longueur > 150);
+
+	if (longueur * largeur * hauteur <= 55 * 35 * 25 ) {
+		printf("Le bagage est VALIDE pour l'embarquement en cabine.\n");
+	}
+	else {
+		printf("Le bagage est NON VALIDE pour l'embarquement en cabine.\n");
+	}
+	// Proposer de traiter un autre colis
+	printf("\nVoulez-vous verifier un autre bagage ? (1 = Oui, 0 = Non) : ");
+	scanf_s("%d", &reponse);
+
+} while (reponse == 1); // Recommence tout si l'utilisateur entre 1
 
 	return(EXIT_SUCCESS);
 }
