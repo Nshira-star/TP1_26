@@ -98,12 +98,19 @@ et tester la boucle au-delà des valeurs permises pour **n**, que vaut la somme 
 **Remarques:**
 
 ```
-scanf utilise l'adresse de la variable qui va stocker la valeur et non la valeur de la variable elle-même. Si on omet de mettre le &, un message du type 'segmentation fault'  apparait lors de l'exécution du programme.
+scanf utilise l'adresse de la variable qui va 
+stocker la valeur et non la valeur de la variable elle-même. 
+Si on omet de mettre le &, un message du type 
+'segmentation fault'  apparait lors de l'exécution du programme.
 ```
 
 
 * **Recommencer tant que n est trop grand**  
-Modifier le programme afin que l'utilisateur soit invité à saisir une nouvelle valeur pour **n** tant qu'il n'aura pas entré une valeur permettant d'effectuer un calcul correct de la somme des **n** premiers entiers.
+Modifier le programme afin 
+que l'utilisateur soit invité à 
+saisir une nouvelle valeur pour **n** tant 
+qu'il n'aura pas entré une valeur permettant
+d'effectuer un calcul correct de la somme des **n** premiers entiers.
 
 ## Exercice 2
 

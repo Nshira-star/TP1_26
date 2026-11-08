@@ -73,7 +73,19 @@ int main() {
 // Quelle est la valeur maximum de n pour que la variable représentant la somme ait une valeur correcte ? 
 printf("La valeur maximum de n sans dépassement de capacité : %d (Somme = %hu)\n", n, somme_precedente);
 
-	
+// version for
+	// 1. Boucle de validation : on bloque l'utilisateur TANT QUE n n'est pas valide
+do {
+	printf("Entrez la valeur de n (entre 1 et 361) : ");
+	scanf_s("%hu", &n);
+} while (n < 1 || n > 361); // On vérifie n AVANT de calculer !
 
+
+somme = 0;
+for (i = 1; i <= n; i++) {
+	somme += i; 
+}
+
+printf("Somme des %hu premiers entiers positifs (version for) : %hu\n", n, somme);
 	return(EXIT_SUCCESS);
 }
