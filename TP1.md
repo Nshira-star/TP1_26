@@ -152,8 +152,11 @@ d'un avion puisque sa taille n'excède pas 55 cm x 35 cm x 25 cm.
 
 ## Exercice 3
 
-Ecrire un programme qui propose à un joueur de deviner un nombre entier compris entre une valeur Min et une valeur Max définies dans le code.
-La valeur mystère est fournie par le générateur de nombres aléatoires (cf. fonction rand() et srand()).
+Ecrire un programme qui 
+propose à un joueur de deviner un nombre
+entier compris entre une valeur Min et une valeur Max définies dans le code.
+La valeur mystère est fournie par le générateur d
+e nombres aléatoires (cf. fonction rand() et srand()).
 
 Lorsque la valeur proposée est inférieure à la valeur à deviner, le programme répond "Trop petit" ou "Trop grand" dans le cas contraire. Le jeu s'arrête quand la valeur a été trouvée et le programme fournit un score qui correspond au nombre de propositions effectuées par le joueur.
 

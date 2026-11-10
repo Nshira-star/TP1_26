@@ -36,8 +36,38 @@ int main() {
 	// Seed the random-number generator with the current time so that
 	// the numbers will be different every time we run.
 	srand((unsigned)time(NULL));
+	int reponse; int MAXI; int MINI; 
 
+	do {
+		trouve = false; // Réinitialisation
 
+		printf("Votre nombre est contenu entre...");
+		scanf_s("%d", &MINI);
+		printf("et...");
+		scanf_s("%d", &MAXI);
+		nbSecret = (rand() % (MAXI - MINI + 1)) + MINI; // Génère un nombre aléatoire entre min et max
+		while (!trouve) {
+			printf("Rentrer votre valeur entre : ");
+			scanf_s("%d", &valeur);
+			nb_essais++;
+
+			if (valeur == nbSecret) {
+				trouve = TRUE;
+				printf("Gagné ! Vous avez trouvé le nombre secret !\n");
+			}
+			else {
+				trouve = FALSE;
+				printf("Vous etes nul!, Redevinez\n");
+			};
+				
+		} 
+
+		printf("\nVoulez-vous rejouer? (1 = Oui, 0 = Non) : ");
+		scanf_s("%d", &reponse);
+
+	} while (reponse == 1); // Recommence tout si l'utilisateur entre 1
+
+	printf("\nVoici vos stats : Vous avez tenté %d fois, le nombre secret était %d, entre %d et %d", nb_essais, nbSecret, MINI, MAXI); // nbSecret est initialisé par la génération aléatoire
 
 	
 	return(EXIT_SUCCESS);
