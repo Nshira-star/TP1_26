@@ -175,7 +175,8 @@ Ecrire un programme qui calcule le plus petit multiple commun – **ppcm**- de t
 
 Le **ppcm** est la plus petite valeur entière qui peut être divisée par chacun de ces nombres.
 
-Le programme doit afficher la valeur du **ppcm** ainsi que le nombre d'opérations arithmétiques réalisées pour calculer le résultat. Comparer cette dernière valeur avec celle obtenue par d'autres étudiants.
+Le programme doit afficher la valeur du **ppcm** ainsi que le nombre d'opérations arithmétiques réalisées pour calculer le résultat. 
+Comparer cette dernière valeur avec celle obtenue par d'autres étudiants.
 
 Exemple d'affichage : Le ppcm de 16, 240 et 64 est égal à 960
 

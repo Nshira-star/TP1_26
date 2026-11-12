@@ -37,10 +37,27 @@
 		unsigned int valA ;
 		unsigned int valB ;
 		unsigned int valC ;
+		unsigned int ppcm;
+		int nbr = 0;
 
 
+		 do{
+			printf("Entrez une première valeur pour le PPCM: %d\n"");
+			scanf_s("%u", &valA);
+			printf("Entrez une deuxième valeur pour le PPCM: %d\n"");
+			scanf_s("%u", &valB);
+			printf("Entrez une troisième valeur pour le PPCM: %d\n"");
+			scanf_s("%u", &valC);
+		} while (valA == 0 || valB == 0 || valC == 0);
+		ppcm = valA;
+		while (ppcm % valA != 0 || ppcm % valB != 0 || ppcm % valC != 0) {
+			nbr++;
+			ppcm += valA;
+			nbr++;
+		};
 
-
+		printf("PPCM(%d,%d,%d) = %d\n", valA, valB, valC, ppcm);
+		printf("Nombre d'opérations : %d\n", nbr);
 
 	return EXIT_SUCCESS;
 }
