@@ -67,9 +67,9 @@ int main() {
 		somme += n;
 		n++;
 	} while (somme >= somme_precedente); // S'arrête net dès que somme "chute" après 65535
-	// n a été incrémenté une fois de trop juste avant le test
-	n = n - 2;
-	// La somme est représentée par une variable de type unsigned short int, 
+	n = n - 2; // n a été incrémenté une fois de trop juste avant le test
+
+// La somme est représentée par une variable de type unsigned short int, 
 // Quelle est la valeur maximum de n pour que la variable représentant la somme ait une valeur correcte ? 
 printf("La valeur maximum de n sans dépassement de capacité : %d (Somme = %hu)\n", n, somme_precedente);
 
