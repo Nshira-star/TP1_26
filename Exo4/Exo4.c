@@ -50,9 +50,20 @@ int main() {
 	locale_name = setlocale(LC_ALL, "fr-FR");
 #endif
 
-	unsigned int valeur;
-	
-
-
+	unsigned int valeur; unsigned int n = 0; 
+	printf("Veuillez renseigner une valeur que vous souhaitez décomposer:");
+	scanf("%u", &valeur);
+	while (valeur != 0) {
+		n = (n * 10) + (valeur % 10);
+		valeur /= 10;
+	};
+	printf("La decomposition de la valeur est : ");
+	while (n != 0) {
+		printf("%u", n % 10); 
+		n /= 10;
+		if (n != 0) {
+			printf("-");
+		};
+	};
 	return EXIT_SUCCESS;
 }
