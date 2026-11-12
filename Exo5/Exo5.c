@@ -42,11 +42,11 @@
 
 
 		 do{
-			printf("Entrez une première valeur pour le PPCM: %d\n"");
+			printf("Entrez une première valeur pour le PPCM: ");
 			scanf_s("%u", &valA);
-			printf("Entrez une deuxième valeur pour le PPCM: %d\n"");
+			printf("Entrez une deuxième valeur pour le PPCM: ");
 			scanf_s("%u", &valB);
-			printf("Entrez une troisième valeur pour le PPCM: %d\n"");
+			printf("Entrez une troisième valeur pour le PPCM: ");
 			scanf_s("%u", &valC);
 		} while (valA == 0 || valB == 0 || valC == 0);
 		ppcm = valA;
